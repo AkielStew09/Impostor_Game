@@ -1,0 +1,18 @@
+The program should take in the amount of players, as well as the keyword of the round. 
+
+End Result:
+
+It should display an intro message, giving some time to get the players ready.They should establish an order and a numbering among them. (time and waiting will be important in this program)
+Then it should show the display to each player, addressing them by number. Each display is to be seen by only that player. It will tell the player the keyword, keep the display up for some seconds, then go to a transition display so the next player can prepare to look.
+It goes like this until the impostor, who is a random number in the player amount, sees their display. It will tell them that they're the impostor, and maybe in a later version it my give them a hint. Not for now though.
+
+
+Implementation:
+
+Random is imported and set up. The player amount is saved as a constant. Then the impostor "index" is run and decided. 
+The display messages are done using a one-based for loop which goes up to and includes the player amount. Use if statements or maybe a switch statement to show two different message types, teammate and impostor. They could even be defined in different functions if that is convenient. 
+A timer function should be used as well as a screen clearing function to facilitate the display messages. That should be all.
+
+The waiting is done by the sleep() function, declared in unistd.h
+It takes the duration in seconds as an int.
+
